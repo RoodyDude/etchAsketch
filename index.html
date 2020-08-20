@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Etch-A-Sketch</title>
+  <meta charset="UTF-8"/>
+  <link href="Stylesheet.css" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <div class="buttonContainer">
+            <button id="clearButton">Clear</button>
+            <button id="backgroundColor">Change Background color</button>
+        </div>
+    </div>
+    <div class="midPageContainer">
+        <div class="leftMiddleContainer">
+            <div class="colorChooser">
+                <ul>
+                        <input type="radio" id="black" name="color" value="rgb(0,0,0)">Black<br>
+                        <input type="radio" id="blue" name="color" value="rgb(0,119,190)">Blue<br>
+                        <input type="radio" id="red" name="color" value="rgb(139,0,0)">Red<br>
+                        <input type="radio" id="green" name="color" value="rgb(34,139,34)">Green<br>
+                        <input type="radio" id="purple" name="color" value="rgb(148,0,211)">Purple<br>
+                        <input type="radio" id="pink" name="color" value="rgb(255,20,147)">Pink<br>
+                        <input type="radio" id="random" name="color" value="random">Random<br>
+                </ul>
+            </div>
+        </div>
+        <div class="gridContainer">
+        </div>
+        <div class="rightMiddleContainer">
+            <div class="sizePicker">
+                <ul>
+                    <input type="radio" id="small" name="size" value="">Small<br>
+                    <input type="radio" id="medium" name="size" value="">Medium<br>
+                    <input type="radio" id="large" name="size" value="">Large<br>
+                </ul>
+            </div>
+            <div class="colorChooser">
+                <ul>
+                    <input type="radio" id="white" name="color" value="white">Eraser<br>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const container = document.querySelector(".gridContainer");
+        const clearButton = document.querySelector("#clearButton");
+        const backgroundColorButton = document.querySelector("#backgroundColor");
+        const wobbieButton = document.querySelector("#wobbie");
+        
+        clearButton.addEventListener('click', () => {
+           clear = document.getElementsByClassName("box");
+           for (let k = 0; k < clear.length; k++) {
+               clear[k].style.backgroundColor = "rgb(255,255,255)";                                        
+           }
+        });
+
+        backgroundColorButton.addEventListener('click', () => {
+            clear = document.getElementsByClassName("box");
+            let bgColor = randomColor();
+            for (let k = 0; k < clear.length; k++) {
+               clear[k].style.backgroundColor = bgColor;                                        
+           }
+        });        
+            
+            
+            function randomNumber(min,max) {
+                let num = Math.floor(Math.random()*(max-min))+min;
+                return num;
+            }
+
+            function randomColor() {
+                return 'rgb(' + randomNumber(0,255) + ', ' + randomNumber(0,255) + ', ' + randomNumber(0,255) + ')';
+            }
+
+
+            function makeGrid(columns, rows) {
+        
+            container.style.setProperty('--grid-columns', columns);
+            container.style.setProperty('--grid-rows', rows);
+            let isDown;
+            container.addEventListener('mousedown', (e) => {
+                    isDown = true;
+                    e.preventDefault();
+                        });
+            document.body.addEventListener('mouseup', () => {
+                isDown = false;
+            });
+            for (i = 0; i < (columns * rows); i++) {
+                const box = document.createElement("div");
+                box.className = "box";
+                box.addEventListener('mouseover', () => {
+                    if (isDown == true) {
+                        const radios = document.getElementsByName('color');
+                        const sizeRadios = document.getElementsByName('size');
+                        if (sizeRadios[0].checked) {
+                            for (let i = 0; i < radios.length; i++) {
+                                if (radios[i].checked) {
+                                    if(radios[i].value == "random") {
+                                        box.style.backgroundColor = randomColor();
+                                    }
+                                    else {
+                                        box.style.backgroundColor = radios[i].value; 
+                                    } 
+                                }
+                            }
+                        }
+                        else if (size.Radios[1].checked) {
+                            for (let i = 0; i < radios.length; i++) {
+                                if (radios[i].chjecked) {
+                                    if(radios[i].value == "random") {
+                                        
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+                container.appendChild(box);
+            }
+        }
+
+
+        makeGrid(21, 22);
+
+    </script>
+</body>

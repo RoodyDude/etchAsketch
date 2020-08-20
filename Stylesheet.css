@@ -1,0 +1,83 @@
+:root {
+    --grid-columns: 16;
+    --grid-rows: 16;
+}
+.header {
+    background-color: #12345b;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+}
+#clearButton {
+    width: 5rem;
+    height: 2rem;
+    background-color:#0077be;
+    border-radius: 10px;
+}
+#backgroundColor {
+    width: 5rem;
+    height: 2rem;
+    background-color:#0077be;
+    border-radius: 10px;
+    font-size: 7px;
+}
+#wobbie {
+    width: 5rem;
+    height: 2rem;
+    background-color:#0077be;
+    border-radius: 10px;
+    font-size: 12px;
+}
+.midPageContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.leftMiddleContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 30rem;
+}
+.rightMiddleContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 30rem;
+}
+.gridContainer {
+    display: grid;
+    grid-template-columns: repeat(var(--grid-columns), 1fr);
+    grid-template-rows: repeat(var(--grid-rows), 1fr);
+    width: 30rem;
+    height: 30rem;
+    border: thin solid black;
+
+}
+.box {
+    width: auto;
+    height: auto;
+    background-color: rgb(255,255,255);
+}
+.colorChooser {
+    height: 15rem;
+    width: 8rem;
+    border: thick solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    list-style: inside;
+    font-style: italic;
+    font-family: Sans-serif;
+}
