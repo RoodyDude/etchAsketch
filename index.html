@@ -10,19 +10,123 @@
         <div class="buttonContainer">
             <button id="clearButton">Clear</button>
             <button id="backgroundColor">Change Background color</button>
+            <button id="save">Save</button>
+            <button id="reload">Reload</button>
         </div>
     </div>
     <div class="midPageContainer">
         <div class="leftMiddleContainer">
             <div class="colorChooser">
-                <ul>
-                        <input type="radio" id="black" name="color" value="rgb(0,0,0)">Black<br>
-                        <input type="radio" id="blue" name="color" value="rgb(0,119,190)">Blue<br>
-                        <input type="radio" id="red" name="color" value="rgb(139,0,0)">Red<br>
-                        <input type="radio" id="green" name="color" value="rgb(34,139,34)">Green<br>
-                        <input type="radio" id="purple" name="color" value="rgb(148,0,211)">Purple<br>
-                        <input type="radio" id="pink" name="color" value="rgb(255,20,147)">Pink<br>
-                        <input type="radio" id="random" name="color" value="random">Random<br>
+                <ul class="colorList">
+                    <label class="colorLabel">
+                        <input type="radio" id="black" name="color" value="rgb(0,0,0)"checked>
+                        <span class="radio"style="background-color: black;"></span></span>
+                    </label>
+
+                    <label class="colorLabel">
+                        <input type="radio" id="darkgray" name="color" value="rgb(105,105,105)">
+                        <span class="radio"style="background-color: rgb(105,105,105);"></span></span>
+                    </label>
+
+                    <label class="colorLabel">
+                        <input type="radio" id="lightgray" name="color" value="rgb(192,192,192)">
+                        <span class="radio"style="background-color: rgb(192,192,192);"></span></span>
+                    </label>
+
+                    <label class="colorLabel">
+                        <input type="radio" id="darkblue" name="color" value="rgb(0,0,128)">
+                        <span class="radio"style="background-color: rgb(0,0,128);"></span></span>
+                    </label>
+
+                    <label class="colorLabel">
+                        <input type="radio" id="blue" name="color" value="rgb(0,0,255)">
+                        <span class="radio"style="background-color: rgb(0,0,255);"></span></span>
+                    </label>
+
+                    <label class="colorLabel">
+                        <input type="radio" id="lightblue" name="color" value="rgb(135,206,250)">
+                        <span class="radio"style="background-color: rgb(135,206,250);"></span></span>
+                    </label>
+
+                    <label class="colorLabel">    
+                        <input type="radio" id="darkred" name="color" value="rgb(139,0,0)">
+                        <span class="radio"style="background-color: rgb(139,0,0);"></span></span>
+                    </label>  
+
+                    <label class="colorLabel">    
+                        <input type="radio" id="red" name="color" value="rgb(178,34,34)">
+                        <span class="radio"style="background-color: rgb(178,34,34);"></span></span>
+                    </label>  
+
+                    <label class="colorLabel">    
+                        <input type="radio" id="lightred" name="color" value="rgb(205,92,92)">
+                        <span class="radio"style="background-color: rgb(205,92,92);"></span></span>
+                    </label>  
+
+                    <label class="colorLabel">
+                        <input type="radio" id="darkgreen" name="color" value="rgb(0,100,0)">
+                        <span class="radio"style="background-color: rgb(0,100,0);"></span></span>
+                    </label>
+
+                    <label class="colorLabel">
+                        <input type="radio" id="green" name="color" value="rgb(34,139,34)">
+                        <span class="radio"style="background-color: rgb(34,139,34);"></span></span>
+                    </label>
+
+                    <label class="colorLabel">
+                        <input type="radio" id="lightgreen" name="color" value="rgb(50,205,50)">
+                        <span class="radio"style="background-color: rgb(50,205,50);"></span></span>
+                    </label>
+
+                    <label class="colorLabel">   
+                        <input type="radio" id="darkpurple" name="color" value="rgb(75,0,130)">
+                        <span class="radio"style="background-color: rgb(75,0,130);"></span></span>
+                    </label>  
+
+                    <label class="colorLabel">   
+                        <input type="radio" id="purple" name="color" value="rgb(128,0,128)">
+                        <span class="radio"style="background-color: rgb(128,0,128);"></span></span>
+                    </label>  
+
+                    <label class="colorLabel">   
+                        <input type="radio" id="lightpurple" name="color" value="rgb(238,130,238)">
+                        <span class="radio"style="background-color: rgb(238,130,238);"></span></span>
+                    </label>  
+
+                    <label class="colorLabel">
+                        <input type="radio" id="darkpink" name="color" value="rgb(199,21,133)">
+                        <span class="radio"style="background-color: rgb(199,21,133);"></span></span>
+                    </label>
+
+                    <label class="colorLabel">
+                        <input type="radio" id="pink" name="color" value="rgb(255,105,180)">
+                        <span class="radio"style="background-color: rgb(255,105,180);"></span></span>
+                    </label>
+
+                    <label class="colorLabel">
+                        <input type="radio" id="lightpink" name="color" value="rgb(255,192,203)">
+                        <span class="radio"style="background-color: rgb(255,192,203);"></span></span>
+                    </label>
+
+                    <label class="colorLabel">
+                        <input type="radio" id="darkyellow" name="color" value="rgb(204,204,0)">
+                        <span class="radio"style="background-color: rgb(204,204,0);"></span></span>
+                    </label>  
+                    
+                    <label class="colorLabel">
+                        <input type="radio" id="yellow" name="color" value="rgb(255,255,51)">
+                        <span class="radio"style="background-color: rgb(255,255,51);"></span></span>
+                    </label> 
+
+                    <label class="colorLabel">
+                        <input type="radio" id="lightyellow" name="color" value="rgb(255,255,153)">
+                        <span class="radio"style="background-color: rgb(255,255,153);"></span></span>
+                    </label> 
+                    
+                    <label class="colorLabel">
+                        <input type="radio" id="random" name="color" value="random">
+                        <span class="radio"id="randomspan"style="background-color: grey;"></span></span>
+                    </label>
                 </ul>
             </div>
         </div>
@@ -30,13 +134,29 @@
         </div>
         <div class="rightMiddleContainer">
             <div class="sizePicker">
-                <ul>
-                    <input type="radio" id="small" name="size" value="">Small<br>
-                    <input type="radio" id="medium" name="size" value="">Medium<br>
-                    <input type="radio" id="large" name="size" value="">Large<br>
+                <div class="sizeChangeText">
+                    <p>Sketchpad Size</p>
+                </div>
+                <ul id="sizer">
+
+                    <label class="sizeLabel">
+                        <input type="radio" id="small" name="size" value=""checked>
+                        <span class="sizeSpan">Small</span>
+                    </label>
+
+                    <label class="sizeLabel">
+                        <input type="radio" id="medium" name="size" value="">
+                        <span class="sizeSpan">Medium</span>
+                    </label>
+
+                    <label class="sizeLabel">
+                        <input type="radio" id="large" name="size" value="">
+                        <span class="sizeSpan"style="padding-right: 10px;">Large</span>
+                    </label>
                 </ul>
+                <button id="sizeChangeButton">Make Grid</button>
             </div>
-            <div class="colorChooser">
+            <div class="eraser">
                 <ul>
                     <input type="radio" id="white" name="color" value="white">Eraser<br>
                 </ul>
@@ -48,35 +168,124 @@
         const container = document.querySelector(".gridContainer");
         const clearButton = document.querySelector("#clearButton");
         const backgroundColorButton = document.querySelector("#backgroundColor");
-        const wobbieButton = document.querySelector("#wobbie");
+        const sizeChanger = document.querySelector('#sizeChangeButton');
+        const save = document.querySelector('#save');
+        const reload = document.querySelector('#reload');
+        const radios = document.getElementsByName('size');
+        let boxList = document.getElementsByClassName("box");
+        let saveColors = [];
+        let sizeKey;
         
-        clearButton.addEventListener('click', () => {
-           clear = document.getElementsByClassName("box");
-           for (let k = 0; k < clear.length; k++) {
-               clear[k].style.backgroundColor = "rgb(255,255,255)";                                        
-           }
-        });
+        clearButton.addEventListener('click', clear);
 
-        backgroundColorButton.addEventListener('click', () => {
-            clear = document.getElementsByClassName("box");
+        backgroundColorButton.addEventListener('click', randomBackground);
+        
+        sizeChanger.addEventListener('click', newGrid);
+        
+        save.addEventListener('click', saveGrid);
+
+        reload.addEventListener('click', reloadGrid);
+
+
+        function randomNumber(min,max) {
+            let num = Math.floor(Math.random()*(max-min))+min;
+            return num;
+        }
+
+        function randomColor() {
+            return 'rgba(' + randomNumber(0,255) + ', ' + randomNumber(0,255) + ', ' + randomNumber(0,255) + ')';
+        }
+
+        function clear() {
+            
+           for (let k = 0; k < boxList.length; k++) {
+               boxList[k].style.backgroundColor = "rgb(255,255,255)";                                        
+           }
+        }
+        
+        function randomBackground() {
+            
             let bgColor = randomColor();
-            for (let k = 0; k < clear.length; k++) {
-               clear[k].style.backgroundColor = bgColor;                                        
+            for (let k = 0; k < boxList.length; k++) {
+               boxList[k].style.backgroundColor = bgColor;                                        
            }
-        });        
+        }
+
+        function  newGrid() {
+            clear();
             
-            
-            function randomNumber(min,max) {
-                let num = Math.floor(Math.random()*(max-min))+min;
-                return num;
+            for (let m = 0; m < boxList.length; m++) {
+                boxList[m].remove();
             }
-
-            function randomColor() {
-                return 'rgb(' + randomNumber(0,255) + ', ' + randomNumber(0,255) + ', ' + randomNumber(0,255) + ')';
+            const sizes = document.getElementsByName("size")
+            if (sizes[0].checked) {
+            makeGrid(16,16);
             }
+            else if (sizes[1].checked) {
+                makeGrid(32,32);
+            }
+            else {
+                makeGrid(64,64);
+            }
+        }
+        function saveGrid() {
+            saveColors = [];
+            for (let q = 0; q < boxList.length; q++) {
+                saveColors.push(boxList[q].style.backgroundColor)
+            }
+            if (radios[0].checked) {
+                sizeKey = "small";
+            }
+            else if (radios[1].checked) {
+                sizeKey = "medium";
+            }
+            else {
+                sizeKey = "large";
+            }
+        }
 
+        function reloadGrid() {
+            let sizeLock;
+            if (radios[0].checked) {
+                sizeLock = "small";
+            }
+            else if (radios[1].checked) {
+                sizeLock = "medium";
+            }
+            else {
+                sizeLock = "large";
+            }
+            if (sizeLock == sizeKey) {
+                for (let l = 0; l < boxList.length; l++) {
+                    boxList[l].style.backgroundColor = saveColors[l];
+                }
+            }
+            else {
+               if (sizeKey == "small") {
+                    radios[0].checked = true;
+                    sizeChanger.click()
+                    for (let l = 0; l < boxList.length; l++) {
+                    boxList[l].style.backgroundColor = saveColors[l];
+                    }
+               }
+               else if (sizeKey == "medium") {
+                    radios[1].checked = true;
+                    sizeChanger.click()
+                    for (let l = 0; l < boxList.length; l++) {
+                    boxList[l].style.backgroundColor = saveColors[l];
+                    }
+               }
+               else {
+                    radios[2].checked = true;
+                    sizeChanger.click()
+                    for (let l = 0; l < boxList.length; l++) {
+                    boxList[l].style.backgroundColor = saveColors[l];
+                    }
+               }
+            }
+        }
 
-            function makeGrid(columns, rows) {
+        function makeGrid(columns, rows) {
         
             container.style.setProperty('--grid-columns', columns);
             container.style.setProperty('--grid-rows', rows);
@@ -94,8 +303,6 @@
                 box.addEventListener('mouseover', () => {
                     if (isDown == true) {
                         const radios = document.getElementsByName('color');
-                        const sizeRadios = document.getElementsByName('size');
-                        if (sizeRadios[0].checked) {
                             for (let i = 0; i < radios.length; i++) {
                                 if (radios[i].checked) {
                                     if(radios[i].value == "random") {
@@ -107,23 +314,10 @@
                                 }
                             }
                         }
-                        else if (size.Radios[1].checked) {
-                            for (let i = 0; i < radios.length; i++) {
-                                if (radios[i].chjecked) {
-                                    if(radios[i].value == "random") {
-                                        
-                                    }
-                                }
-                            }
-                        }
-                    }
-                });
+                    });
                 container.appendChild(box);
             }
         }
-
-
-        makeGrid(21, 22);
-
+        makeGrid(16,16);
     </script>
 </body>
